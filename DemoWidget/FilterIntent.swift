@@ -18,9 +18,7 @@ struct FilterIntent: AppIntent {
         self.filterType = filterType
     }
     
-    init() {
-        filterType = -1
-    }
+    init() {}
     
     func perform() async throws -> some IntentResult {
         UserDefaults.standard.set(filterType, forKey: "filterType")
